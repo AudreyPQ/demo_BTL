@@ -1,0 +1,291 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: linear-gradient(to right, #FDFBFB, #EBEDEE 70%);
+}
+
+body::-webkit-scrollbar {
+    width: 7px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(to bottom, #222, #3498DB);
+    border-radius: 100rem;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #A6D1E6;
+    border-radius: 100rem;
+}
+
+.site-title-centered .site-branding {
+    padding: 30px 0 15px;
+    position: relative;
+}
+
+div.site-branding {
+    padding: 30px 0 15px;
+}
+
+p.site-title {
+    padding: 0 10px;
+    text-align: center;
+}
+
+p.logo-desc {
+    text-align: center;
+    font-size: 18px;
+    padding: 0 20px 20px;
+    margin: 15px;
+    font-weight: 300;
+}
+
+.site-title-centered .logo-desc::before {
+    content: "";
+    width: 70px;
+    height: 3px;
+    background: linear-gradient(90.06deg, #3498db -4.45%, #ecf0f1 104.12%);
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 0);
+}
+
+div.main-navbar {
+    margin: 15px 0 0;
+    padding: 15px 0;
+    clear: both;
+    text-align: center;
+}
+
+li.menu-item a {
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    padding: 0 10px;
+    margin: 0;
+    color: #222;
+    line-height: 40px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 0;
+    opacity: 1;
+}
+
+li.menu-item {
+    display: inline;
+}
+
+li.menu-item a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 2px;
+    background-color: #3498db;
+    z-index: -1;
+    transition: height 0.2s linear, width 0.2s ease-in-out 0.25s;
+}
+
+li.menu-item a:hover::before {
+    height: 100%;
+    width: 100%;
+}
+
+li.menu-item a:hover {
+    color: #ecf0f1;
+}
+
+.content {
+    min-height: 1000px;
+}
+
+.mySlides {
+    display: none;
+}
+img {
+    vertical-align: middle;
+}
+
+.slideshow-container {
+max-width: 1000px;
+position: relative;
+margin: auto;
+box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+}
+
+.dot {
+height: 15px;
+width: 15px;
+margin: 0 2px;
+background-color: #bbb;
+border-radius: 50%;
+display: inline-block;
+transition: background-color 0.6s ease;
+}
+
+.active {
+background-color: #717171;
+}
+
+.fade {
+animation-name: fade;
+animation-duration: 3s;
+}
+
+@keyframes fade {
+from {opacity: .4} 
+to {opacity: 1}
+}
+
+@media only screen and (max-width: 300px) {
+.text {font-size: 11px}
+}
+
+.footer {
+    border-top: 2px solid #222;
+    background-color: #3498db;
+    min-height: 200px;
+}
+
+.footer-container {
+    padding: 20px 30px;
+    width: 100%;
+    font-size: 14px;
+    display: flex;
+}
+
+.footer-content {
+    width: 25%;
+}
+
+.footer-content1 {
+    width: 50%;
+    margin: 0 35px;
+    text-align: center;
+}
+
+.footer-desc {
+    margin: 10px 0;
+    line-height: 1.4;
+}
+ul.footer-menu{
+    margin-top: 5px;
+}
+ul.footer-menu > li {
+    padding: 5px;
+    list-style-type: none;
+
+}
+ul.footer-menu > li > a{
+    text-decoration: none;
+    color:#222;
+}
+ul.footer-menu > li > a:hover{
+    color:white;
+}
+div.footer-content > div > a:active{
+    color: white;
+}
+.footer-content > div > a{
+    color: #222;
+}
+
+div.abc{
+    background-color: rgb(0, 0, 173);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: 50px;
+    color: #fff;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background:rgba(0, 0, 0, 0.4);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.open {
+    display: flex;
+}
+
+.modal-content {
+    text-align: center;
+    color: #fff;
+    background-color: #222;
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px;
+    
+}
+
+.modal-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #fff;
+    padding: 12px;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.modal-container {
+    position: relative;
+    animation: modalFadeIn ease .5s;
+}
+
+@keyframes modalFadeIn {
+    from {
+        transform: translateY(-140px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.totop-btn{
+    position: fixed;
+    display: flex;
+    width: 50px;
+    height: 50px;
+    background: #000;
+    bottom: 16px;
+    right: 32px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 32px;
+    text-decoration: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .4s;
+}
+
+.totop-btn.show {
+    bottom: 32px;
+    pointer-events: auto;
+    opacity: 1;
+}
